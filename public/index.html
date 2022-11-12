@@ -6,53 +6,61 @@
 <html lang="en">
 
    <head>
+
        <title>BurgerOnline</title>
        <meta charset="utf-8"/>  
        <!-- meta: specify page description, keywords, author, mm.
         Här har vi def att character set UTF-8 används så kan anv åäö -->
-   </head>
+        <link rel="stylesheet" type="text/css" href="style.css"/>       
+                  
+    </head>
 
    <body>
 
         <header>
             <h1>Välkommen till BurgerOnline</h1>
+            <img src="https://t3.ftcdn.net/jpg/03/08/47/58/360_F_308475881_m7o04LTdIbwWWnSJDqjFTjOnWvU0yj8b.jpg">
         </header>
 
         <main>
-            <section>
+            <section id="idVäljburgare">
                 <h2>Välj burgare</h2>
                 <p>Här väljer du burgare</p>
 
-                    <div style="display: inline-block">
+                <div class="wrapperVäljburgare">
+
+                    <div class="box a">
                         <h3>Hästburgare</h3>
-                        <img src="https://cdnb.buildit.net/q:i/r:0/wp:1/w:688/u:https://www.hurlangeoverleverenhamburgare.se/wp-content/uploads/2020/03/2020-03-06-WN.jpg" alt="Hästburgare" title="Hästburgare" style="width: 250px; height: 150px;">
+                        <img src="https://cdnb.buildit.net/q:i/r:0/wp:1/w:688/u:https://www.hurlangeoverleverenhamburgare.se/wp-content/uploads/2020/03/2020-03-06-WN.jpg" alt="Hästburgare" title="Hästburgare" style="width: 220px; height: 130px;">
                         <ul>
-                            <li>Lokalt uppfödd ponny</li>
-                            <li>Innehåller gluten</li>
+                            <li>Lokalt uppfödd ponny </li>
+                            <li>Innehåller <span class="bolded">gluten</span></li>
                         </ul>
                     </div>
 
-                    <div style="display: inline-block">
-                        <h3>Ostfrallaburgare</h3>
-                        <img src="https://www.gamereactor.se/media/forum/se/6524917_59.jpg" alt="Ostfrallaburgare" title="Ostfrallaburgare" style="width: 250px; height: 150px;">
+                    <div class="box b">
+                        <h3>Ostburgare</h3>
+                        <img src="https://www.gamereactor.se/media/forum/se/6524917_59.jpg" alt="Ostburgare" title="Ostburgare" style="width: 220px; height: 130px;">
                         <ul>
-                            <li>Innehåller laktos</li>
-                            <li>Innehåller gluten</li>
+                            <li>Innehåller <span class="bolded">laktos</span></li>
+                            <li>Innehåller <span class="bolded">gluten</span></li>
                         </ul>
                     </div>
 
-                    <div style="display: inline-block">
+                    <div class="box c">
                         <h3>Korv med bröd</h3>
-                        <img src="https://cdn2.cdnme.se/4772288/8-3/mobiluppladdning_5ccec773ddf2b353ae6a0b63.jpg" alt="Korv med bröd" title="Korv med bröd" style="width: 250px; height: 150px;">
+                        <img src="https://cdn2.cdnme.se/4772288/8-3/mobiluppladdning_5ccec773ddf2b353ae6a0b63.jpg" alt="Korv med bröd" title="Korv med bröd" style="width: 220px; height: 130px;">
                         <ul>
                             <li>Som en burgare fast med korv och korvbröd</li>
-                            <li>Innehåller gluten</li>
+                            <li>Innehåller <span class="bolded">gluten</span></li>
                         </ul>
-                    </div>
+                    </div>                     
+
+                </div>
 
             </section>
 
-            <section>
+            <section id="idKundinformation">
                 <h2>Kundinformation</h2>
                 <p>Här ger du nödvändig information om dig som kund </p>
 
@@ -98,8 +106,8 @@
                     </div>
 
                     <br>
-                    <fieldset>
-                        <legend>Köstillhörighet:</legend>
+                    <div>
+                        <p>Köstillhörighet:</p>
 
                         <div>
                             <label for="Vill ej ange">Vill ej ange</label>
@@ -121,8 +129,8 @@
                             <label for="Annan">Annan</label>
                             <input type="radio" id="Annan" name="Kön" value="Annan">
                         </div>                        
-                    </fieldset>     
-                                               
+                    </div>
+                                                                   
             </section>
         </main>
 
