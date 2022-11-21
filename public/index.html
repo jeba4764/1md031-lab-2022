@@ -1,154 +1,17 @@
-<!DOCTYPE HTML>
-<!-- När person besöker hemsida utan att säga vilken fil hen vill besöka kommer
-    servern kolla efter "index" och returna den om finns
-    är generellt websidans home page -->
-
-<html lang="en">
-
-   <head>
-
-       <title>BurgerOnline</title>
-       <meta charset="utf-8"/>  
-       <!-- meta: specify page description, keywords, author, mm.
-        Här har vi def att character set UTF-8 används så kan anv åäö -->
-        <link rel="stylesheet" type="text/css" href="style.css"/>       
-                  
-    </head>
-
-   <body>
-
-        <header>
-            <h1>Välkommen till BurgerOnline</h1>
-            <img src="https://t3.ftcdn.net/jpg/03/08/47/58/360_F_308475881_m7o04LTdIbwWWnSJDqjFTjOnWvU0yj8b.jpg">
-        </header>
-
-        <main>
-            <section id="idVäljburgare">
-                <h2>Välj burgare</h2>
-                <p>Här väljer du burgare</p>
-
-                <div class="wrapperVäljburgare">
-
-                    <div class="box a">
-                        <h3>Hästburgare</h3>
-                        <img src="https://cdnb.buildit.net/q:i/r:0/wp:1/w:688/u:https://www.hurlangeoverleverenhamburgare.se/wp-content/uploads/2020/03/2020-03-06-WN.jpg" alt="Hästburgare" title="Hästburgare" style="width: 220px; height: 130px;">
-                        <ul>
-                            <li>Lokalt uppfödd ponny </li>
-                            <li>Innehåller <span class="bolded">gluten</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="box b">
-                        <h3>Ostburgare</h3>
-                        <img src="https://www.gamereactor.se/media/forum/se/6524917_59.jpg" alt="Ostburgare" title="Ostburgare" style="width: 220px; height: 130px;">
-                        <ul>
-                            <li>Innehåller <span class="bolded">laktos</span></li>
-                            <li>Innehåller <span class="bolded">gluten</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="box c">
-                        <h3>Korv med bröd</h3>
-                        <img src="https://cdn2.cdnme.se/4772288/8-3/mobiluppladdning_5ccec773ddf2b353ae6a0b63.jpg" alt="Korv med bröd" title="Korv med bröd" style="width: 220px; height: 130px;">
-                        <ul>
-                            <li>Som en burgare fast med korv och korvbröd</li>
-                            <li>Innehåller <span class="bolded">gluten</span></li>
-                        </ul>
-                    </div>                     
-
-                </div>
-
-            </section>
-
-            <section id="idKundinformation">
-                <h2>Kundinformation</h2>
-                <p>Här ger du nödvändig information om dig som kund </p>
-
-                    <div>
-                        <h3>Leveransinformation:</h3>
-
-                        <p>
-                            <label for="För- och efternamn">För- och efternamn</label>
-                            <br>
-                            <input type="text" id="För- och efternamn" name="f_e" required ="required" placeholder="Namn">
-                            <!-- name: till denna variablel sparas det som skrivs, placeholder: det som står innan rutan klickats -->                               
-                        </p>
-
-                        <p>
-                            <label for="Email">Email</label>
-                            <br>
-                            <input type="email" id="Email" name="em" required ="required" placeholder="Email">
-                        </p>
-
-                        <p>
-                            <label for="Adress">Adress</label>
-                            <br>
-                            <input type="text" id="Adress" name="ad" required ="required" placeholder="Adress">
-                        </p>
-
-                        <p>
-                            <label for="Postnummer">Postnummer</label>
-                            <br>
-                            <input type="number" id="Email" name="p_nr" required="required" placeholder="Postnummer"> 
-                        </p> 
-                    </div>
-
-
-                    <div>                        
-                        <label for="Betalningsmetod">Betalningsmetod</label>
-                        <br>
-                        <select id="Betalningsmetod" name="b_m">
-                            <option>Kontokort</option>
-                            <option>Bank</option>
-                            <option>Klarna</option>
-                            <option>Swish</option>
-                        </select>                        
-                    </div>
-
-                    <br>
-                    <div>
-                        <p>Köstillhörighet:</p>
-
-                        <div>
-                            <label for="Vill ej ange">Vill ej ange</label>
-                            <input type="radio" id="Vill ej ange" name="Kön" value="Vill ej ange" checked="checked">
-                        </div>
-
-                        <div>
-                            <label for="Kvinna">Kvinna</label>
-                            <input type="radio" id="Kvinna" name="Kön" value="Kvinna">
-                            <!-- value: så man vet vilken radio-button som var vald -->
-                        </div>
-
-                        <div>
-                            <label for="Man">Man</label>
-                            <input type="radio" id="Man" name="Kön" value="Man">
-                        </div>
-
-                        <div>
-                            <label for="Annan">Annan</label>
-                            <input type="radio" id="Annan" name="Kön" value="Annan">
-                        </div>                        
-                    </div>
-                                                                   
-            </section>
-        </main>
-
-        <br>
-        <button type="submit">
-            <img src="https://previews.123rf.com/images/iridi/iridi2104/iridi210400576/167858969-a-reddish-cat-with-a-knife-and-a-fork-eats-a-big-fresh-fish-burger-from-a-fish-shaped-plate-white-ba.jpg" width="300px;">
-            Skicka beställning
-        </button>
-
-        <hr>
-        <footer>
-            
-            
-
-        </footer>
-
-   </body>
-
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
-
-
