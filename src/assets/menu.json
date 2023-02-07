@@ -1,0 +1,26 @@
+
+[
+    {
+        "productName": "Hästburgare",
+        "urlImg": "https://cdnb.buildit.net/q:i/r:0/wp:1/w:688/u:https://www.hurlangeoverleverenhamburgare.se/wp-content/uploads/2020/03/2020-03-06-WN.jpg",
+        "kCal": 300,
+        "gluten": true,
+        "lactose":false      
+    },
+
+    {
+        "productName": "Ostburgare",
+        "urlImg":"https://www.gamereactor.se/media/forum/se/6524917_59.jpg", 
+        "kCal": 400,
+        "gluten": false,
+        "lactose": true      
+    },
+
+    {
+        "productName": "Korv med bröd",
+        "urlImg": "https://cdn2.cdnme.se/4772288/8-3/mobiluppladdning_5ccec773ddf2b353ae6a0b63.jpg",   
+        "kCal": 500,
+        "gluten": true,
+        "lactose":false      
+    }
+]

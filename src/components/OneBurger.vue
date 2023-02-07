@@ -74,4 +74,15 @@
   }
   
   </style>
-  
+
+
+
+
+<button v-on:click="this.testEmit"> testEmit </button>
+
+testEmit: function() {
+  socket.emit("emittedCrosswordInfo", {word: this.word,
+                                       nrOfMatches: this.matchesIterator});
+  console.log( {word: this.word,
+                nrOfMatches: this.matchesIterator} )
+}

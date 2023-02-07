@@ -2,17 +2,37 @@
     <div id="orders">
 
       <div id="orderList">
-        <div v-for="(order, key) in orders" v-bind:key="'order'+key">
-          #{{ key }}: {{ order.orderItems.join(", ") }}
+        <div v-for="(order, key) in orders" v-bind:key="'order'+key"> <!--förstå den sista-->
+          <!-- #{{ key }}: {{ order.orderItems.join(", ") }} -->
+          #{{ key }}: {{ order.orderItems }} 
+          <dd>{{order.customerInformation}}</dd>
         </div>
         <button v-on:click="clearQueue">Clear Queue</button>
       </div>
 
       <div id="dots" v-bind:style="{ background: 'url(' + require('../../public/img/polacks.jpg')+ ')' }">
-          <div  v-for="(order, key) in orders"
+        
+          <!-- I vårt fall NÄR VI ANVÄNDE ADDORDER ME [beans, curry] har vi array of objects som  heter "objects"
+               Som i sin tur kommer som ett object från servern
+
+              { orders:
+                { key:{} key:{} key:{} ... } 
+              }
+                    
+              där varje {} är en order, ex { orderID: 123 
+                                             details: { x: 45
+                                                        y: 67 }
+                                             orderitems:  ["beans, "curry"]
+                                            } 
+            -->
+          <div  v-for="(order, key) in orders" 
                 v-bind:style="{ left: order.details.x + 'px',
-                               top: order.details.y + 'px'}" 
-                v-bind:key="'dots' + key">
+                               top: order.details.y + 'px'}"   
+                v-bind:key="'dots' + key">                     
+                
+                <!--1a v-bind: ...uses v-bind to create dynamic styling of the element. Acesses datan details in the order och anvädner den-->
+                <!--2a v-bind: Här används key som en internal key för:  "...vue to keep track of dynamically createt elements (with v-bind:key="dots + key) -->
+                                             
             {{ key }}
           </div>
       </div>
@@ -33,14 +53,12 @@
       }
     },
     created: function () {
-      // VIktigt: TAR EMOT 'currentQueue'FRÅN SERVERN!!!
-      // kom ihåg: currentQue innehöll {orders {orderid {orderid, details, orderitems}}}
       socket.on('currentQueue', data =>
         this.orders = data.orders);
     },
     methods: {
       clearQueue: function () {
-        socket.emit('clearQueue');
+        socket.emit('clearQueue'); // dvs i socket:en clearas queuen!!
         
       }
     }

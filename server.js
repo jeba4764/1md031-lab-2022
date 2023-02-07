@@ -64,12 +64,14 @@ io.on('connection', function (socket) {
 
   // Send list of orders when a client connects
   socket.emit('currentQueue', { orders: data.getAllOrders() });
+                              // det är detta som skapar fula objektet!!!!!! asså att det står order:
 
   // When a connected client emits an "addOrder" message
   socket.on('addOrder', function (order) {
-    data.addOrder(order);
+    data.addOrder(order);  // lägger till motaggna ordern i egna lagringen av ordrar (som heter orders)
+
     // send updated info to all connected clients, note the use of io instead of socket
-    io.emit('currentQueue', { orders: data.getAllOrders() });
+    io.emit('currentQueue', { orders: data.getAllOrders() }); // pbs ger infon namanet currentqueue
   });
 
   // When a connected client emits an "clearQueue" message
